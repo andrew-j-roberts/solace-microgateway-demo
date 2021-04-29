@@ -1,0 +1,218 @@
+{
+  "applicationDomains": [
+    {
+      "createdTime": 1619108098409,
+      "updatedTime": 1619623650534,
+      "createdBy": "zpfsf1x4t29",
+      "changedBy": "zpfsf1x4t29",
+      "id": "24ufhcxy0za9",
+      "name": "PAMAVE-EVENTING",
+      "topicDomain": "",
+      "description": "",
+      "enforceUniqueTopicNames": false,
+      "events": [
+        {
+          "createdTime": 1619121159242,
+          "updatedTime": 1619124361056,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy12q5",
+          "name": "Verify External Account with Id - Unverified",
+          "version": "0.0.1",
+          "shared": false,
+          "description": "",
+          "schemaId": null,
+          "schemaVersionId": null,
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "24ufhcxy0za9",
+          "revisionNumber": 2,
+          "keyPrimitivePayloadType": null,
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "24ufhcxy13nr",
+            "virtualBrokerId": "24ufhcxy13jb",
+            "topicAddressLevels": [
+              {
+                "id": "24ufhcxy13k5",
+                "consumable": false,
+                "name": "ave",
+                "displayName": "ave",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13kf",
+                "consumable": false,
+                "name": "v1",
+                "displayName": "v1",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13kp",
+                "consumable": false,
+                "name": "account",
+                "displayName": "account",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13mn",
+                "consumable": false,
+                "name": "verify",
+                "displayName": "verify",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13mx",
+                "consumable": false,
+                "name": "external",
+                "displayName": "external",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13n7",
+                "consumable": false,
+                "name": "id",
+                "displayName": "id",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13nh",
+                "consumable": true,
+                "name": "unverified",
+                "displayName": "unverified",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        }
+      ],
+      "applications": [
+        {
+          "createdTime": 1619116967874,
+          "updatedTime": 1619197711683,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy11kr",
+          "name": "Account Management Analytics",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "24ufhcxy0za9",
+          "producedEventIds": [],
+          "consumedEventIds": [],
+          "revisionNumber": 8,
+          "applicationClass": "unspecified",
+          "endpoints": [
+            {
+              "consumedEventIds": [
+                "24ufhcxy12q5"
+              ],
+              "topicSubscriptions": [
+                "*/ave/>",
+                "ave/>"
+              ],
+              "name": "Account Management Analytics",
+              "virtualBrokerId": "24ufhcxy13jb",
+              "endpointType": "solaceQueueEndpoint"
+            }
+          ],
+          "type": "application"
+        },
+        {
+          "createdTime": 1619114603051,
+          "updatedTime": 1619186538210,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy11b1",
+          "name": "Delete Non External Account with Id Processor",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "24ufhcxy0za9",
+          "producedEventIds": [],
+          "consumedEventIds": [],
+          "revisionNumber": 5,
+          "applicationClass": "unspecified",
+          "endpoints": [
+            {
+              "consumedEventIds": [],
+              "topicSubscriptions": [
+                "DELETE/ave/v1/account/delete/non-external/*"
+              ],
+              "name": "Delete Non External Account with Id Processor",
+              "virtualBrokerId": "24ufhcxy13jb",
+              "endpointType": "solaceQueueEndpoint"
+            }
+          ],
+          "type": "application"
+        },
+        {
+          "createdTime": 1619116489213,
+          "updatedTime": 1619186605310,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy11it",
+          "name": "Verify External Account with Id Processor",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "24ufhcxy0za9",
+          "producedEventIds": [
+            "24ufhcxy12q5"
+          ],
+          "consumedEventIds": [],
+          "revisionNumber": 10,
+          "applicationClass": "unspecified",
+          "endpoints": [
+            {
+              "consumedEventIds": [],
+              "topicSubscriptions": [
+                "*/ave/v1/account/verify/external/*"
+              ],
+              "name": "Verify External Account with Id Processor",
+              "virtualBrokerId": "24ufhcxy13jb",
+              "endpointType": "solaceQueueEndpoint"
+            }
+          ],
+          "type": "application"
+        }
+      ],
+      "type": "applicationDomain"
+    }
+  ],
+  "virtualBrokers": [
+    {
+      "createdTime": 1619124247182,
+      "updatedTime": 1619124247182,
+      "createdBy": "zpfsf1x4t29",
+      "changedBy": "zpfsf1x4t29",
+      "id": "24ufhcxy13jb",
+      "name": "PAMAVE",
+      "description": "",
+      "brokerType": "solace",
+      "levelDelimiter": "/",
+      "topicNodes": [],
+      "type": "virtualBroker"
+    }
+  ],
+  "formatVersion": "1",
+  "type": "ApplicationDomainExport"
+}

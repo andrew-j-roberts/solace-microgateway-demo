@@ -1,0 +1,411 @@
+{
+  "applicationDomains": [
+    {
+      "createdTime": 1619109064304,
+      "updatedTime": 1619109064304,
+      "createdBy": "zpfsf1x4t29",
+      "changedBy": "zpfsf1x4t29",
+      "id": "24ufhcxy107l",
+      "name": "PAMAVE-REST",
+      "topicDomain": "",
+      "description": "",
+      "enforceUniqueTopicNames": true,
+      "schemas": [
+        {
+          "createdTime": 1619113066184,
+          "updatedTime": 1619114414656,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy10mv",
+          "name": "Delete Account",
+          "shared": true,
+          "description": "",
+          "contentType": "JSON",
+          "content": null,
+          "applicationDomainId": "24ufhcxy107l",
+          "revisionNumber": 2,
+          "versions": [],
+          "type": "schema"
+        },
+        {
+          "createdTime": 1619108098414,
+          "updatedTime": 1619116276223,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy0zat",
+          "name": "Verify Account",
+          "shared": true,
+          "description": "",
+          "contentType": "JSON",
+          "content": "{\n  \"definitions\": {},\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"$id\": \"http://example.com/root.json\",\n  \"type\": \"object\",\n  \"title\": \"The Root Schema\",\n  \"required\": [\n    \"accountId\",\n    \"accountType\",\n    \"category\",\n    \"productCode\",\n    \"bankName\",\n    \"branchName\"\n  ],\n  \"properties\": {\n    \"accountId\": {\n      \"$id\": \"#/properties/accountId\",\n      \"type\": \"string\",\n      \"title\": \"The AccountId Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"1fbee4f9-598d-4ddc-ab7e-c6f7d36f5265\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"accountType\": {\n      \"$id\": \"#/properties/accountType\",\n      \"type\": \"string\",\n      \"title\": \"The Account Type Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"CHK\",\n        \"SAV\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"category\": {\n      \"$id\": \"#/properties/category\",\n      \"type\": \"string\",\n      \"title\": \"The Category Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"EXT\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"productCode\": {\n      \"$id\": \"#/properties/productCode\",\n      \"type\": \"string\",\n      \"title\": \"The Product Code Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"EXT\",\n        \"DDA\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"bankName\": {\n      \"$id\": \"#/properties/bankName\",\n      \"type\": \"string\",\n      \"title\": \"The Bank Name Schema\"\n    },\n    \"branchName\": {\n      \"$id\": \"#/properties/branchName\",\n      \"type\": \"string\",\n      \"title\": \"The Branch Name Schema\"\n    },\n    \"verificationStatus\": {\n      \"$id\": \"#/properties/verificationStatus\",\n      \"type\": \"string\",\n      \"title\": \"The Verification Status Schema\"\n    }\n  }\n}",
+          "applicationDomainId": "24ufhcxy107l",
+          "revisionNumber": 7,
+          "versions": [],
+          "type": "schema"
+        },
+        {
+          "createdTime": 1619111515815,
+          "updatedTime": 1619114406253,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy10d5",
+          "name": "Query Account",
+          "shared": true,
+          "description": "",
+          "contentType": "JSON",
+          "content": "{\n  \"definitions\": {},\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"$id\": \"http://example.com/root.json\",\n  \"type\": \"object\",\n  \"title\": \"The Root Schema\",\n  \"required\": [\n    \"accountId\",\n    \"accountType\",\n    \"category\",\n    \"productCode\",\n    \"bankName\",\n    \"branchName\"\n  ],\n  \"properties\": {\n    \"accountId\": {\n      \"$id\": \"#/properties/accountId\",\n      \"type\": \"string\",\n      \"title\": \"The AccountId Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"1fbee4f9-598d-4ddc-ab7e-c6f7d36f5265\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"accountType\": {\n      \"$id\": \"#/properties/accountType\",\n      \"type\": \"string\",\n      \"title\": \"The Account Type Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"CHK\",\n        \"SAV\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"category\": {\n      \"$id\": \"#/properties/category\",\n      \"type\": \"string\",\n      \"title\": \"The Category Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"EXT\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"productCode\": {\n      \"$id\": \"#/properties/productCode\",\n      \"type\": \"string\",\n      \"title\": \"The Product Code Schema\",\n      \"default\": \"\",\n      \"examples\": [\n        \"EXT\",\n        \"DDA\"\n      ],\n      \"pattern\": \"^(.*)$\"\n    },\n    \"bankName\": {\n      \"$id\": \"#/properties/bankName\",\n      \"type\": \"string\",\n      \"title\": \"The Bank Name Schema\"\n    },\n    \"branchName\": {\n      \"$id\": \"#/properties/branchName\",\n      \"type\": \"string\",\n      \"title\": \"The Branch Name Schema\"\n    },\n    \"verificationStatus\": {\n      \"$id\": \"#/properties/verificationStatus\",\n      \"type\": \"string\",\n      \"title\": \"The Verification Status Schema\"\n    }\n  }\n}",
+          "applicationDomainId": "24ufhcxy107l",
+          "revisionNumber": 3,
+          "versions": [],
+          "type": "schema"
+        }
+      ],
+      "events": [
+        {
+          "createdTime": 1619116280414,
+          "updatedTime": 1619124636000,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy11dj",
+          "name": "Verify External Account with Id - POST",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "",
+          "schemaId": "24ufhcxy0zat",
+          "schemaVersionId": null,
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "24ufhcxy107l",
+          "revisionNumber": 2,
+          "keyPrimitivePayloadType": null,
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "24ufhcxy13w3",
+            "virtualBrokerId": "24ufhcxy13jb",
+            "topicAddressLevels": [
+              {
+                "id": "24ufhcxy13u5",
+                "consumable": false,
+                "name": "POST",
+                "displayName": "POST",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13uf",
+                "consumable": false,
+                "name": "ave",
+                "displayName": "ave",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13up",
+                "consumable": false,
+                "name": "v1",
+                "displayName": "v1",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13uz",
+                "consumable": false,
+                "name": "account",
+                "displayName": "account",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13v9",
+                "consumable": false,
+                "name": "verify",
+                "displayName": "verify",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13vj",
+                "consumable": false,
+                "name": "external",
+                "displayName": "external",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13vt",
+                "consumable": true,
+                "name": "id",
+                "displayName": "id",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1619116318477,
+          "updatedTime": 1619124591856,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy11f7",
+          "name": "Verify External Account with Id - GET",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "",
+          "schemaId": "24ufhcxy0zat",
+          "schemaVersionId": null,
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "24ufhcxy107l",
+          "revisionNumber": 2,
+          "keyPrimitivePayloadType": null,
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "24ufhcxy13tl",
+            "virtualBrokerId": "24ufhcxy13jb",
+            "topicAddressLevels": [
+              {
+                "id": "24ufhcxy13rn",
+                "consumable": false,
+                "name": "GET",
+                "displayName": "GET",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13rx",
+                "consumable": false,
+                "name": "ave",
+                "displayName": "ave",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13s7",
+                "consumable": false,
+                "name": "v1",
+                "displayName": "v1",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13sh",
+                "consumable": false,
+                "name": "account",
+                "displayName": "account",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13sr",
+                "consumable": false,
+                "name": "verify",
+                "displayName": "verify",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13t1",
+                "consumable": false,
+                "name": "external",
+                "displayName": "external",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13tb",
+                "consumable": true,
+                "name": "id",
+                "displayName": "id",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        },
+        {
+          "createdTime": 1619113078600,
+          "updatedTime": 1619124548626,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy10np",
+          "name": "Delete Non External Account with Id - DELETE",
+          "version": "0.0.1",
+          "shared": true,
+          "description": "",
+          "schemaId": "24ufhcxy10mv",
+          "schemaVersionId": null,
+          "keySchemaId": null,
+          "keySchemaVersionId": null,
+          "applicationDomainId": "24ufhcxy107l",
+          "revisionNumber": 3,
+          "keyPrimitivePayloadType": null,
+          "valuePrimitivePayloadType": null,
+          "topicAddress": {
+            "id": "24ufhcxy13r3",
+            "virtualBrokerId": "24ufhcxy13jb",
+            "topicAddressLevels": [
+              {
+                "id": "24ufhcxy13p5",
+                "consumable": false,
+                "name": "DELETE",
+                "displayName": "DELETE",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13pf",
+                "consumable": false,
+                "name": "ave",
+                "displayName": "ave",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13pp",
+                "consumable": false,
+                "name": "v1",
+                "displayName": "v1",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13pz",
+                "consumable": false,
+                "name": "account",
+                "displayName": "account",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13q9",
+                "consumable": false,
+                "name": "delete",
+                "displayName": "delete",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13qj",
+                "consumable": false,
+                "name": "non-external",
+                "displayName": "non-external",
+                "description": "",
+                "children": [],
+                "topicNodeType": "literal",
+                "type": "topicNode"
+              },
+              {
+                "id": "24ufhcxy13qt",
+                "consumable": true,
+                "name": "id",
+                "displayName": "id",
+                "topicNodeType": "variable",
+                "type": "topicNode"
+              }
+            ],
+            "type": "topicAddress"
+          },
+          "type": "event"
+        }
+      ],
+      "applications": [
+        {
+          "createdTime": 1619116195863,
+          "updatedTime": 1619131535152,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy11c5",
+          "name": "Verify External Account with Id",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "24ufhcxy107l",
+          "producedEventIds": [
+            "24ufhcxy11dj",
+            "24ufhcxy11f7"
+          ],
+          "consumedEventIds": [],
+          "revisionNumber": 6,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        },
+        {
+          "createdTime": 1619113532832,
+          "updatedTime": 1619131469089,
+          "createdBy": "zpfsf1x4t29",
+          "changedBy": "zpfsf1x4t29",
+          "id": "24ufhcxy10qr",
+          "name": "Delete Non External Account with Id",
+          "version": "0.0.1",
+          "description": "",
+          "applicationDomainId": "24ufhcxy107l",
+          "producedEventIds": [
+            "24ufhcxy10np"
+          ],
+          "consumedEventIds": [],
+          "revisionNumber": 7,
+          "applicationClass": "unspecified",
+          "endpoints": [],
+          "type": "application"
+        }
+      ],
+      "type": "applicationDomain"
+    }
+  ],
+  "virtualBrokers": [
+    {
+      "createdTime": 1619124247182,
+      "updatedTime": 1619124247182,
+      "createdBy": "zpfsf1x4t29",
+      "changedBy": "zpfsf1x4t29",
+      "id": "24ufhcxy13jb",
+      "name": "PAMAVE",
+      "description": "",
+      "brokerType": "solace",
+      "levelDelimiter": "/",
+      "topicNodes": [],
+      "type": "virtualBroker"
+    }
+  ],
+  "formatVersion": "1",
+  "type": "ApplicationDomainExport"
+}
